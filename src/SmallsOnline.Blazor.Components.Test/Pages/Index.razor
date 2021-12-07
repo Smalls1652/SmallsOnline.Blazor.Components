@@ -1,0 +1,40 @@
+﻿@using SmallsOnline.Blazor.Components.Common
+
+@page "/"
+
+<div class="container-fluid">
+    <BootstrapRow ClassNames="pt-3 py-3 justify-content-center">
+        <BootstrapCol MD=12 LG=9 XL=7 XXL=6>
+            <PageContentCard PageTitle="Home" Id="home-card">
+                <BootstrapRow>
+                    <BootstrapCol>
+                        <p>
+                            Hello world!
+                        </p>
+                    </BootstrapCol>
+                </BootstrapRow>
+                <BootstrapRow>
+                    <BootstrapCol>
+                        <SimpleTable Title="Big Chungus">
+                            <SimpleTableItem>
+                                Yeet
+                            </SimpleTableItem>
+                            <SimpleTableItem>
+                                Another yeet
+                            </SimpleTableItem>
+                        </SimpleTable>
+                    </BootstrapCol>
+                </BootstrapRow>
+            </PageContentCard>
+        </BootstrapCol>
+        <BootstrapCol XS=12 SM=6 MD=5 LG=3 XXL=2 ClassNames="pt-4 pt-lg-0">
+            <PageContentCard>
+                <BootstrapRow ClassNames="justify-content-center">
+                    <BootstrapCol>
+                        <img src="imgs/animal-crossing-avatar.png" class="border border-primary rounded-circle img-fluid" />
+                    </BootstrapCol>
+                </BootstrapRow>
+            </PageContentCard>
+        </BootstrapCol>
+    </BootstrapRow>
+</div>

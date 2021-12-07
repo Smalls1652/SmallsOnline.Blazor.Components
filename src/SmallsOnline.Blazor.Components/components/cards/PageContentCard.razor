@@ -1,0 +1,19 @@
+﻿@namespace SmallsOnline.Blazor.Components.Cards
+
+@inherits BootstrapComponent
+
+<div id="@Id" class="@ClassValue">
+    <div class="card shadow-lg">
+        @if (string.IsNullOrEmpty(PageTitle) == false)
+        {
+            <div class="card-header">
+                <h2 class="mt-2 mb-1">
+                    @PageTitle
+                </h2>
+            </div>
+        }
+        <div class="card-body">
+            @ChildContent
+        </div>
+    </div>
+</div>

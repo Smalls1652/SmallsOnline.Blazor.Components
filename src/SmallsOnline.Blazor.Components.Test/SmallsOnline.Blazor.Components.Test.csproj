@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DirSeparator>$([System.IO.Path]::DirectorySeparatorChar)</DirSeparator>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<BootstrapFiles Include="$(Bootstrap_CssPath);$(Bootstrap_CssMapPath)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SmallsOnline.Blazor.Components\SmallsOnline.Blazor.Components.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="node_modules\**">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+		<None Include="copyBootstrapFiles.ps1">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<Target Name="InitBootstrap">
+		<CallTarget Targets="InitNPM;InstallBootstrap" />
+	</Target>
+
+	<Target Name="InitNPM">
+		<Message Importance="high" Text="- Running 'npm install'" />
+		<Exec Command="npm install" />
+	</Target>
+
+	<Target Name="UpdateBootstrap">
+		<Message Importance="high" Text="- Running 'npm update'" />
+		<Exec Command="npm update bootstrap" />
+	</Target>
+
+	<Target Name="InstallBootstrap">
+		<Message Importance="high" Text="- Installing Bootstrap to project" />
+		<Exec Command="pwsh -File copyBootstrapFiles.ps1" />
+	</Target>
+
+</Project>
