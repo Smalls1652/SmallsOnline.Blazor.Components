@@ -21,4 +21,18 @@
     </None>
   </ItemGroup>
 
+  <Target Name="InitProject_Combined">
+		<Message Importance="high" Text="-------------------------------------------------" />
+		<Message Importance="high" Text="Running initialization for component library" />
+		<Message Importance="high" Text="-------------------------------------------------" />
+		<CallTarget Targets="Clean;Restore" />
+	</Target>
+
+  <Target Name="BuildProject_Combined">
+		<Message Importance="high" Text="---------------------------------------" />
+		<Message Importance="high" Text="Running build for component library" />
+		<Message Importance="high" Text="---------------------------------------" />
+		<CallTarget Targets="Clean;Restore;Build;Publish" />
+	</Target>
+
 </Project>
