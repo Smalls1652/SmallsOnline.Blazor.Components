@@ -1,0 +1,13 @@
+{
+    "navigationFallback": {
+      "rewrite": "/index.html",
+      "exclude": [
+          "/imgs/*.{png,jpg,gif}",
+          "/css/*",
+          "/_framework/*",
+          "/icon-192.png",
+          "/favicon.ico",
+          "/SmallsOnline.Blazor.Components.Test.styles.css"
+        ]
+    }
+  }

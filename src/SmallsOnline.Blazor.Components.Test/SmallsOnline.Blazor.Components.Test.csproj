@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -39,6 +39,14 @@
 		</None>
 		<None Include="package-lock.json">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+
+		<None Include="swa-cli.config.json">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+
+		<None Include="staticwebapp.config.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 

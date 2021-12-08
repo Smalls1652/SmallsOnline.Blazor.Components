@@ -1,0 +1,9 @@
+{
+    "configurations": {
+        "app": {
+            "appLocation": "./",
+            "context": "https://localhost:7262",
+            "run": "dotnet run"
+        }
+    }
+}
