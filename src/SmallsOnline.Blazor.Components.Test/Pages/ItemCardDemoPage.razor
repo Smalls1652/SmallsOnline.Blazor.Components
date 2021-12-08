@@ -1,0 +1,68 @@
+﻿@using SmallsOnline.Blazor.Components.Common
+
+@page "/item-card-demo"
+
+<PageContentCard PageTitle="Item Card Demo" Id="item-card-demo-card">
+    <GoBackHomeSection />
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard>
+                <TitleSection>
+                    <h3>Simple Item Card</h3>
+                </TitleSection>
+                <ChildContent>
+                    <ItemCard>
+                        <p>
+                            Wow! Look at this card.
+                        </p>
+                    </ItemCard>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard TitleSubtitle="Technically an item card within an item card">
+                <TitleSection>
+                    <h3>Item Card with a header</h3>
+                </TitleSection>
+                <ChildContent>
+                    <ItemCard>
+                        <TitleSection>
+                            <ItemCardHeader01 />
+                        </TitleSection>
+                        <ChildContent>
+                            <p>
+                                Wow! Look at this card, it has a header!
+                            </p>
+                        </ChildContent>
+                    </ItemCard>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard>
+                <TitleSection>
+                    <h3>Item Card with a header and footer</h3>
+                </TitleSection>
+                <ChildContent>
+                    <ItemCard TitleSubtitle="And a subtitle">
+                        <TitleSection>
+                            <ItemCardHeader01 />
+                        </TitleSection>
+                        <ChildContent>
+                            <p>
+                                Wow! Look at this card, it has a header and footer!
+                            </p>
+                        </ChildContent>
+                        <FooterSection>
+                            <ItemCardFooter01 />
+                        </FooterSection>
+                    </ItemCard>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+</PageContentCard>

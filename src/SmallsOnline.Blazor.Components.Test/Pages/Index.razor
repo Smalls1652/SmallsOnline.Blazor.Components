@@ -2,91 +2,17 @@
 
 @page "/"
 
-<div class="container-fluid">
-    <BootstrapRow ClassNames="pt-3 justify-content-center">
-        <BootstrapCol XS=12 SM=12 MD=12 LG=9 XL=7 XXL=6>
-            <PageContentCard PageTitle="Home" Id="home-card">
-                <BootstrapRow>
-                    <BootstrapCol>
-                        <p>
-                            Hello world!
-                        </p>
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-3">
-                    <BootstrapCol>
-                        <SimpleTable Title="Simple Table">
-                            <SimpleTableItem>
-                                Table Item 01
-                            </SimpleTableItem>
-                            <SimpleTableItem>
-                                Table Item 02
-                            </SimpleTableItem>
-                        </SimpleTable>
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-3">
-                    <BootstrapCol>
-                        <ItemCard>
-                            <p>
-                                Wow! Look at this card.
-                            </p>
-                        </ItemCard>
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-3">
-                    <BootstrapCol>
-                        <ItemCard>
-                            <TitleSection>
-                                <ItemCardHeader01 />
-                            </TitleSection>
-                            <ChildContent>
-                                <p>
-                                    Wow! Look at this card, it has a header!
-                                </p>
-                            </ChildContent>
-                        </ItemCard>
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-3">
-                    <BootstrapCol>
-                        <ItemCard TitleSubtitle="And a subtitle">
-                            <TitleSection>
-                                <ItemCardHeader01 />
-                            </TitleSection>
-                            <ChildContent>
-                                <p>
-                                    Wow! Look at this card, it has a header and footer!
-                                </p>
-                            </ChildContent>
-                            <FooterSection>
-                                <ItemCardFooter01 />
-                            </FooterSection>
-                        </ItemCard>
-                    </BootstrapCol>
-                </BootstrapRow>
-            </PageContentCard>
-        </BootstrapCol>
-        <BootstrapCol XS=12 SM=6 MD=5 LG=3 XXL=2 ClassNames="pt-4 pt-lg-0">
-            <PageContentCard>
-                <BootstrapRow ClassNames="justify-content-center">
-                    <BootstrapCol>
-                        <img src="imgs/animal-crossing-avatar.png" class="border border-primary rounded-circle img-fluid" />
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-2 justify-content-center">
-                    <BootstrapCol>
-                        <hr />
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow ClassNames="pt-2 justify-content-center">
-                    <BootstrapCol>
-                        <p class="text-center">
-                            <a href="https://github.com/Smalls1652/SmallsOnline.Blazor.Components" target="_blank" rel="noopener noreferrer">View the source on GitHub!</a>
-                        </p>
-                    </BootstrapCol>
-                </BootstrapRow>
-            </PageContentCard>
+<PageContentCard PageTitle="Home" Id="home-card">
+    <BootstrapRow>
+        <BootstrapCol>
+            <p>
+                Hello world!
+            </p>
         </BootstrapCol>
     </BootstrapRow>
-</div>
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ListOfPages />
+        </BootstrapCol>
+    </BootstrapRow>
+</PageContentCard>
