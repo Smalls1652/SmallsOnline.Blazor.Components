@@ -10,10 +10,6 @@
 		<DirSeparator>$([System.IO.Path]::DirectorySeparatorChar)</DirSeparator>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<RunAOTCompilation>true</RunAOTCompilation>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<BootstrapFiles Include="$(Bootstrap_CssPath);$(Bootstrap_CssMapPath)" />
 	</ItemGroup>
