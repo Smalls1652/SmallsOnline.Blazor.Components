@@ -1,0 +1,29 @@
+﻿@namespace SmallsOnline.Blazor.Components.Cards
+
+@inherits BootstrapComponent
+
+<div class="@ClassValue">
+    @if (TitleSection != null)
+    {
+        <div class="card-header">
+            @TitleSection
+            @if (string.IsNullOrEmpty(TitleSubtitle) == false)
+            {
+                <div class="card-subtitle">
+                    <span class="fw-bold">
+                        @TitleSubtitle
+                    </span>
+                </div>
+            }
+        </div>
+    }
+    <div class="card-body">
+        @ChildContent
+    </div>
+    @if (FooterSection != null)
+    {
+        <div class="card-footer">
+            @FooterSection
+        </div>
+    }
+</div>
