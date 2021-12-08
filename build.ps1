@@ -17,14 +17,17 @@ param(
 $scriptRoot = $PSScriptRoot
 
 $slnPath = $null
+$projectPath = $null
 switch ($Project) {
     "ComponentLibraryAndTestApp" {
         $slnPath = Join-Path -Path $scriptRoot -ChildPath "SmallsOnline.Blazor.Components_with_Test.sln"
+        $projectPath = Join-Path -Path $scriptRoot -ChildPath "src\SmallsOnline.Blazor.Components.Test\"
         break
     }
 
     Default {
         $slnPath = Join-Path -Path $scriptRoot -ChildPath "SmallsOnline.Blazor.Components.sln"
+        $projectPath = Join-Path -Path $scriptRoot -ChildPath "src\SmallsOnline.Blazor.Components\"
         break
     }
 }
@@ -32,4 +35,8 @@ switch ($Project) {
 $buildTarget = "BuildProject_Combined"
 if ($PSCmdlet.ShouldProcess("Run command", "dotnet msbuild -target:`"$($buildTarget)`" -property:`"Configuration=$($Config)`" -noLogo -verbosity:`"minimal`" `"$($slnPath)`"")) {
     dotnet msbuild -target:"$($buildTarget)" -property:"Configuration=$($Config)" -noLogo -verbosity:"minimal" "$($slnPath)"
+}
+
+if ($PSCmdlet.ShouldProcess("Run command", "dotnet publish `"$($projectPath)`" --configuration $($Config)")) {
+    dotnet publish "$($projectPath)" --configuration $($Config)
 }
