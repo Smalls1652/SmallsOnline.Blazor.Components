@@ -2,6 +2,10 @@
 
 Razor components to house commonly used web components in my Blazor projects. It is the Razor equivalent to my component library for ReactJS projects ([@Smalls1652/react-smallsonline-core](https://github.com/Smalls1652/react-smallsonline-core))
 
+If you want to see the test app in action you can visit it here:
+
+- [https://blazor-components-test.smalls.online/](https://blazor-components-test.smalls.online/)
+
 ## 🧰 What does this consist of?
 
 This component library is utilizing [Bootstrap](https://github.com/twbs/bootstrap) and wrapping specific CSS classes into usable Razor components. The intention of making this component library is to make implementing the UI easier and to keep the UI consistent across various different projects. The goal is to keep it in line with what I'm doing in the [ReactJS version](https://github.com/Smalls1652/react-smallsonline-core) of this.
