@@ -1,0 +1,26 @@
+﻿@using SmallsOnline.Blazor.Components.Common
+
+@page "/simple-table-demo"
+
+<PageContentCard PageTitle="Simple Table Demo" Id="simple-table-demo-card">
+    <GoBackHomeSection />
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard>
+                <TitleSection>
+                    <h3>Example - 01</h3>
+                </TitleSection>
+                <ChildContent>
+                    <SimpleTable Title="Simple Table">
+                        <SimpleTableItem>
+                            Table Item 01
+                        </SimpleTableItem>
+                        <SimpleTableItem>
+                            Table Item 02
+                        </SimpleTableItem>
+                    </SimpleTable>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+</PageContentCard>

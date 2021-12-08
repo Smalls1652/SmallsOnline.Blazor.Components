@@ -5,7 +5,14 @@
     </header>
     <main>
         <div class="py-3">
-            @Body
+            <div class="container-fluid">
+                <BootstrapRow ClassNames="pt-3 justify-content-center">
+                    <BootstrapCol XS=12 SM=12 MD=12 LG=9 XL=7 XXL=6>
+                        @Body
+                    </BootstrapCol>
+                    <Sidebar />
+                </BootstrapRow>
+            </div>
         </div>
     </main>
 </div>

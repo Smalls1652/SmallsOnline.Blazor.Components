@@ -1,0 +1,45 @@
+﻿@using SmallsOnline.Blazor.Components.Common
+
+@page "/list-group-demo"
+
+<PageContentCard PageTitle="List Group Demo" Id="list-group-demo-card">
+    <GoBackHomeSection />
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard>
+                <TitleSection>
+                    <h3>Normal List Group</h3>
+                </TitleSection>
+                <ChildContent>
+                    <SimpleListGroup>
+                        <SimpleListGroupItem>
+                            <span>List group item 01</span>
+                        </SimpleListGroupItem>
+                        <SimpleListGroupItem>
+                            <span>List group item 02</span>
+                        </SimpleListGroupItem>
+                    </SimpleListGroup>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+    <BootstrapRow ClassNames="pt-3">
+        <BootstrapCol>
+            <ItemCard>
+                <TitleSection>
+                    <h3>Flushed List Group</h3>
+                </TitleSection>
+                <ChildContent>
+                    <SimpleListGroup Flush>
+                        <SimpleListGroupItem>
+                            <span>List group item 01, but flushed</span>
+                        </SimpleListGroupItem>
+                        <SimpleListGroupItem>
+                            <span>List group item 02, but flushed</span>
+                        </SimpleListGroupItem>
+                    </SimpleListGroup>
+                </ChildContent>
+            </ItemCard>
+        </BootstrapCol>
+    </BootstrapRow>
+</PageContentCard>
