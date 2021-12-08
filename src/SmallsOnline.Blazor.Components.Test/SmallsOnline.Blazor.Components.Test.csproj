@@ -10,6 +10,10 @@
 		<DirSeparator>$([System.IO.Path]::DirectorySeparatorChar)</DirSeparator>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<RunAOTCompilation>true</RunAOTCompilation>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<BootstrapFiles Include="$(Bootstrap_CssPath);$(Bootstrap_CssMapPath)" />
 	</ItemGroup>
@@ -49,7 +53,7 @@
 		<Message Importance="high" Text="---------------------------------------" />
 		<Message Importance="high" Text="Running build for Test Blazor WASM app" />
 		<Message Importance="high" Text="---------------------------------------" />
-		<CallTarget Targets="Clean;Restore;InitBootstrap;Build;Publish" />
+		<CallTarget Targets="Clean;Restore;InitBootstrap;Build" />
 	</Target>
 
 	<Target Name="InitBootstrap">
