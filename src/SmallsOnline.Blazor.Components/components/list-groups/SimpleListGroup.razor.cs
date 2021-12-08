@@ -5,9 +5,9 @@ namespace SmallsOnline.Blazor.Components.ListGroups
     public partial class SimpleListGroup : BootstrapComponent
     {
         [Parameter]
-        public bool Flush { get; set; }
+        public bool Flush { get; set; } = false;
 
-        private string ListGroupClassValue;
+        private string? ListGroupClassValue;
 
         protected override void OnParametersSet()
         {
